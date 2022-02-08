@@ -5,14 +5,112 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity" android:id="@+id/cityNameTextView">
     <TextView
+            android:text="Sat, Feb 12 7℃ /3℃ "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/FifthDayData"
+            android:textSize="18sp" android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/FourthDayData"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+    />
+    <TextView
+            android:text="Fri, Feb 11 8℃ /3℃ "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/FourthDayData"
+            android:textSize="18sp" android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/ThirdDayData"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+    />
+    <TextView
+            android:text="Thu, Feb 10 9℃ /4℃ "
+            android:layout_width="wrap_content"
+            android:layout_height="24dp" android:id="@+id/ThirdDayData"
+            android:textSize="18sp" android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/SecondDayData"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+    />
+    <TextView
+            android:text="Wed, Feb 09 11℃ /9℃ "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/SecondDayData"
+            android:textSize="18sp" android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/FirstDayData"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+    />
+    <TextView
+            android:text="Visibility: 10.0km"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/visibility"
+            android:textSize="18sp" android:layout_marginEnd="52dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp" app:layout_constraintTop_toBottomOf="@+id/pressure"/>
+    <TextView
+            android:text="Humidity: 70%"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/humidity"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="65dp"
+            android:textSize="18sp" android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/wind"/>
+    <TextView
+            android:text="WeatherApp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" android:id="@+id/Title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="70dp" android:textColor="#009688" android:textSize="36sp"
+            app:layout_constraintHorizontal_bias="0.497" android:textStyle="bold"/>
+    <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
+            android:inputType="textPersonName"
+            android:text="Enter city name"
+            android:ems="10"
+            android:id="@+id/cityName"
+            android:layout_marginTop="36dp"
+            app:layout_constraintTop_toBottomOf="@+id/Title" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+            android:text="City Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView3"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/cityName" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:textSize="30sp" android:textStyle="bold"/>
+    <TextView
+            android:text="5℃"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:textSize="24sp"
+            app:layout_constraintHorizontal_bias="0.498" android:id="@+id/temperature" android:textStyle="bold"/>
+    <TextView
+            android:text="6.7m/s WSW"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/wind"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="65dp"
+            android:layout_marginTop="80dp" app:layout_constraintTop_toBottomOf="@+id/textView3"
+            android:textSize="18sp"/>
+    <TextView
+            android:text="1000hPa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/pressure"
+            android:layout_marginTop="80dp" app:layout_constraintTop_toBottomOf="@+id/textView3"
+            android:textSize="18sp" android:layout_marginEnd="80dp" app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+            android:text="5-day forecast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView9"
+            android:layout_marginTop="140dp"
+            app:layout_constraintTop_toBottomOf="@+id/temperature"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:textSize="24sp" android:textStyle="bold"/>
+    <TextView
+            android:text="Tue, Feb 08 13℃/10℃ "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/FirstDayData"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
