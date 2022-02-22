@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             boolean handled = false;
             if (id == EditorInfo.IME_ACTION_DONE) {
                 DataHandler dataHandler = new DataHandler();
-                handled = dataHandler.setData(v.getText().toString(),getApplicationContext());
+                handled = dataHandler.setData(v.getText().toString(),this);
             }
             return handled;
         });
