@@ -6,14 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity" android:id="@+id/city">
-    <TextView
-            android:text="Sat, Feb 12 7℃ /3℃ "
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/FifthDayData"
-            android:textSize="18sp" android:layout_marginTop="10dp"
-            app:layout_constraintTop_toBottomOf="@+id/FourthDayData"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-    />
+
     <TextView
             android:text="Fri, Feb 11 8℃ /3℃ "
             android:layout_width="wrap_content"
@@ -138,7 +131,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="110dp"
-        android:text="5-day forecast"
+        android:text="Next 4 days:"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

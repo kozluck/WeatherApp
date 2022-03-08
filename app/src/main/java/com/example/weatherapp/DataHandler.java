@@ -22,11 +22,12 @@ public class DataHandler {
     public boolean setData(String cityName, Activity activity){
         Geocoder geocoder = new Geocoder(activity.getApplicationContext());
         try {
-            List<Address> address = geocoder.getFromLocationName(cityName,5);
+            List<Address> address = geocoder.getFromLocationName(cityName,1);
             Address location = address.get(0);
             ViewHandler viewHandler = new ViewHandler(activity);
             JSONObject jsonObject = getDataFromApi(String.valueOf(location.getLatitude()),String.valueOf(location.getLongitude()));
             viewHandler.setValuesFromJsonObject(jsonObject);
+            viewHandler.setCityName(location.getAddressLine(0));
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -37,7 +38,7 @@ public class DataHandler {
     private JSONObject getDataFromApi(String lat, String lon){
         HttpURLConnection http;
         try {
-            URL url = new URL("https://api.openweathermap.org/data/2.5/weather?lat=" +lat+"&lon="+lon+"&appid="+apiKeyWeather);
+            URL url = new URL("https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lon+"&exclude=hourly,minutely,alerts&appid="+apiKeyWeather);
             http = (HttpsURLConnection)url.openConnection();
             http.setRequestMethod("GET");
             http.connect();
